@@ -1,0 +1,710 @@
+@-webkit-keyframes upDown {
+  0% {
+    bottom: 7%;
+  }
+  50% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 7%;
+  }
+}
+
+@keyframes upDown {
+  0% {
+    bottom: 7%;
+  }
+  50% {
+    bottom: 5%;
+  }
+  100% {
+    bottom: 7%;
+  }
+}
+
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+  width: 100vw;
+  height: auto;
+}
+
+body .wrap {
+  width: 100%;
+  height: auto;
+}
+
+body .wrap .menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .wrap .menu .hamburger {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  z-index: 1;
+  height: 4vh;
+  width: auto;
+}
+
+body .wrap .menu .hamburger span {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  content: "";
+  height: 0.8vh;
+  background: #fff;
+  border: 0.1vw solid #ccc;
+  width: 2.5vw;
+  display: block;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .wrap .menu .hamburger .hamburger1 {
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+body .wrap .menu .hamburger .hamburger3 {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+body .wrap .menu .menuText {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrap .menu .menuText p {
+  font-size: 6vw;
+  font-family: 'Staatliches', cursive;
+  color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .wrap .menu .menuText .menuHome::after {
+  display: block;
+  position: relative;
+  bottom: 50%;
+  left: -25%;
+  content: "";
+  width: 0;
+  height: 40%;
+  background: #9c4c4c;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuHome:hover::after {
+  width: 150%;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuHome:hover {
+  color: #27b314;
+}
+
+body .wrap .menu .menuText .menuAbout::after {
+  display: block;
+  position: relative;
+  bottom: 50%;
+  left: -25%;
+  content: "";
+  width: 0;
+  height: 40%;
+  background: #dfd78e;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuAbout:hover::after {
+  width: 150%;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuAbout:hover {
+  color: #5c5bb8;
+}
+
+body .wrap .menu .menuText .menuWork::after {
+  display: block;
+  position: relative;
+  bottom: 50%;
+  left: -25%;
+  content: "";
+  width: 0;
+  height: 40%;
+  background: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuWork:hover::after {
+  width: 150%;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuWork:hover {
+  color: #00ff33;
+}
+
+body .wrap .menu .menuText .menuContact::after {
+  display: block;
+  position: relative;
+  bottom: 50%;
+  left: -25%;
+  content: "";
+  width: 0;
+  height: 40%;
+  background: #483d3d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuContact:hover::after {
+  width: 150%;
+  z-index: -1;
+}
+
+body .wrap .menu .menuText .menuContact:hover {
+  color: #bbc980;
+}
+
+body .wrap .menu .menuText .bg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  opacity: 0.9;
+}
+
+body .wrap .scrollDown {
+  display: none;
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  -webkit-animation: upDown 3s  infinite;
+          animation: upDown 3s  infinite;
+}
+
+body .wrap .home {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 4vw;
+  background: #3366ff;
+  color: #fff;
+  font-family: 'Caveat', cursive;
+}
+
+body .wrap .about {
+  width: 100vw;
+  height: auto;
+}
+
+body .wrap .about .aboutAnimation {
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  color: #3366ff;
+  font-family: 'Staatliches', cursive;
+}
+
+body .wrap .about .aboutAnimation h2 {
+  position: relative;
+}
+
+body .wrap .about .aboutAnimation h2 span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5vw;
+  line-height: 0;
+}
+
+body .wrap .about .aboutImg {
+  width: 100vw;
+  height: 100vh;
+  background: url("../img/aboutImg.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+body .wrap .about .shortText {
+  width: 100vw;
+  height: 100vh;
+  background-color: #3366ff;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 2vw;
+  line-height: 2;
+}
+
+body .wrap .about .shortText b {
+  font-size: 2.5vw;
+}
+
+body .wrap .about .hello {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body .wrap .about .hello h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  padding-bottom: 3vh;
+}
+
+body .wrap .about .hello p {
+  font-size: 1.5vw;
+  line-height: 2;
+}
+
+body .wrap .about .hello > b {
+  line-height: 2;
+  font-size: 4vw;
+}
+
+body .wrap .about .skill {
+  width: 100vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-family: 'Staatliches', cursive;
+  padding-top: 8vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#3366ff));
+  background: linear-gradient(to bottom, white, #3366ff);
+}
+
+body .wrap .about .skill p {
+  height: 30vh;
+  font-size: 4vw;
+}
+
+body .wrap .about .exp {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: #3366ff;
+  color: #fff;
+}
+
+body .wrap .about .exp li {
+  margin: 0 auto;
+  width: 70%;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrap .about .exp li .expImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30%;
+  height: 20vh;
+}
+
+body .wrap .about .exp li .expImg img {
+  height: 100%;
+}
+
+body .wrap .about .exp li .exptext {
+  width: 70%;
+}
+
+body .wrap .about .exp li .exptext h4 {
+  font-size: 2vw;
+  padding-bottom: 2vh;
+}
+
+body .wrap .about .exp li .exptext p {
+  font-size: 1.2vw;
+}
+
+body .wrap .work {
+  width: 100vw;
+  height: auto;
+  background: #1a1a1a;
+}
+
+body .wrap .work .workAnimation {
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  color: #3366ff;
+  font-family: 'Staatliches', cursive;
+  color: #00ff33;
+}
+
+body .wrap .work .workAnimation h2 {
+  position: relative;
+}
+
+body .wrap .work .workAnimation h2 span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5vw;
+  line-height: 0;
+}
+
+body .wrap .work .projects {
+  width: auto;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #f1f1f1;
+}
+
+body .wrap .work .projects .works {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: #1a1a1a;
+}
+
+body .wrap .work .projects .works > h1 {
+  font-family: 'Staatliches', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 40vw;
+  opacity: 0.2;
+}
+
+body .wrap .work .projects .works .works_Info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body .wrap .work .projects .works .works_Info .works_Img {
+  width: 40vw;
+  z-index: 10;
+}
+
+body .wrap .work .projects .works .works_Info .works_Img img {
+  width: 100%;
+}
+
+body .wrap .work .projects .works .works_Info .works_text {
+  width: 40vw;
+  z-index: 10;
+}
+
+body .wrap .work .projects .works .works_Info .works_text h1 {
+  font-size: 3vw;
+  line-height: 2;
+}
+
+body .wrap .work .projects .works .works_Info .works_text p {
+  font-size: 1vw;
+  line-height: 1.5;
+  padding-bottom: 1vh;
+}
+
+body .wrap .work .projects .works .works_Info .works_text .view {
+  text-align: center;
+  border: 1px solid #fff;
+  margin: 0 auto;
+  padding: 1vh 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 100%;
+}
+
+body .wrap .work .projects .works .works_Info .works_text .view:hover {
+  background: #f1f1f1;
+  color: #000;
+}
+
+body .wrap .contact {
+  width: 100vw;
+  height: auto;
+}
+
+body .wrap .contact .contactAnimation {
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 4vw;
+  color: #3366ff;
+  font-family: 'Staatliches', cursive;
+  color: #ad0000;
+}
+
+body .wrap .contact .contactAnimation h2 {
+  position: relative;
+}
+
+body .wrap .contact .contactAnimation h2 span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5vw;
+  line-height: 0;
+}
+
+body .wrap .contact .contact_text {
+  width: 100vw;
+  height: 60vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+body .wrap .contact .contact_text p {
+  line-height: 2;
+  font-size: 1vw;
+  font-weight: 700;
+}
+
+body .wrap .contact .contact_text p b {
+  font-size: 3vw;
+  color: #ad0000;
+}
+
+body .wrap .contact .message {
+  width: 100vw;
+  height: 100vh;
+  background: #ad0000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .wrap .contact .message h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  text-align: center;
+  height: 30vh;
+  line-height: 2;
+}
+
+body .wrap .contact .message h2 b {
+  font-size: 2vw;
+}
+
+body .wrap .contact .message form {
+  height: 40vh;
+  width: 35vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .wrap .contact .message form .email {
+  font-size: 1vw;
+  width: 100%;
+  height: 10%;
+  padding: 0 3%;
+  border-radius: 3px;
+}
+
+body .wrap .contact .message form .email:focus {
+  outline: solid #000;
+}
+
+body .wrap .contact .message form .textarea {
+  font-size: 1vw;
+  width: 100%;
+  height: 50%;
+  padding: 3% 3%;
+  border-radius: 3px;
+}
+
+body .wrap .contact .message form .textarea:focus {
+  outline: solid #000;
+}
+
+body .wrap .contact .message form .textarea::-webkit-input-placeholder {
+  font-weight: 500;
+}
+
+body .wrap .contact .message form .textarea:-ms-input-placeholder {
+  font-weight: 500;
+}
+
+body .wrap .contact .message form .textarea::-ms-input-placeholder {
+  font-weight: 500;
+}
+
+body .wrap .contact .message form .textarea::placeholder {
+  font-weight: 500;
+}
+
+body .wrap .contact .message form button {
+  width: 20%;
+  height: 8%;
+  border-radius: 10px;
+  border-color: #fff;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
