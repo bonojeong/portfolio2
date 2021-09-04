@@ -22,10 +22,53 @@
   }
 }
 
+@-webkit-keyframes noIntroAni {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes noIntroAni {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes IntroAni {
+  to {
+    font-size: 10vw;
+  }
+}
+
+@keyframes IntroAni {
+  to {
+    font-size: 10vw;
+  }
+}
+
+@-webkit-keyframes IntroAniSpan {
+  to {
+    font-size: 2vw;
+  }
+}
+
+@keyframes IntroAniSpan {
+  to {
+    font-size: 2vw;
+  }
+}
+
 body {
   font-family: 'Nanum Gothic', sans-serif;
   width: 100vw;
   height: auto;
+  cursor: default;
 }
 
 body .wrap {
@@ -33,54 +76,62 @@ body .wrap {
   height: auto;
 }
 
-body .wrap .menu {
-  display: none;
+body .wrap .hamburger {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-}
-
-body .wrap .menu .hamburger {
-  position: absolute;
   top: 3%;
   right: 3%;
   z-index: 1;
   height: 4vh;
-  width: auto;
+  width: 3vw;
 }
 
-body .wrap .menu .hamburger span {
+body .wrap .hamburger span {
   position: absolute;
   top: 3%;
   right: 3%;
   content: "";
-  height: 0.8vh;
+  height: 20%;
   background: #fff;
   border: 0.1vw solid #ccc;
-  width: 2.5vw;
+  border-radius: 3px;
+  width: 100%;
   display: block;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-body .wrap .menu .hamburger .hamburger1 {
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
-}
-
-body .wrap .menu .hamburger .hamburger3 {
+body .wrap .hamburger .hamburger2 {
   -webkit-transform: translateY(200%);
           transform: translateY(200%);
 }
 
-body .wrap .menu .menuText {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body .wrap .hamburger .hamburger3 {
+  -webkit-transform: translateY(400%);
+          transform: translateY(400%);
+}
+
+body .wrap .hamburgerOn {
+  z-index: 1001;
+}
+
+body .wrap .hamburgerOn .hamburger1 {
+  -webkit-transform: translateY(200%) rotate(45deg);
+          transform: translateY(200%) rotate(45deg);
+}
+
+body .wrap .hamburgerOn .hamburger2 {
+  opacity: 0;
+}
+
+body .wrap .hamburgerOn .hamburger3 {
+  -webkit-transform: translateY(200%) rotate(-45deg);
+          transform: translateY(200%) rotate(-45deg);
+}
+
+body .wrap .menuText {
+  display: none;
+  width: 100vw;
+  height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -93,7 +144,7 @@ body .wrap .menu .menuText {
           justify-content: center;
 }
 
-body .wrap .menu .menuText p {
+body .wrap .menuText p {
   font-size: 6vw;
   font-family: 'Staatliches', cursive;
   color: #fff;
@@ -101,7 +152,7 @@ body .wrap .menu .menuText p {
   transition: 0.5s;
 }
 
-body .wrap .menu .menuText .menuHome::after {
+body .wrap .menuText .menuHome::after {
   display: block;
   position: relative;
   bottom: 50%;
@@ -115,16 +166,16 @@ body .wrap .menu .menuText .menuHome::after {
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuHome:hover::after {
+body .wrap .menuText .menuHome:hover::after {
   width: 150%;
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuHome:hover {
+body .wrap .menuText .menuHome:hover {
   color: #27b314;
 }
 
-body .wrap .menu .menuText .menuAbout::after {
+body .wrap .menuText .menuAbout::after {
   display: block;
   position: relative;
   bottom: 50%;
@@ -138,16 +189,16 @@ body .wrap .menu .menuText .menuAbout::after {
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuAbout:hover::after {
+body .wrap .menuText .menuAbout:hover::after {
   width: 150%;
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuAbout:hover {
+body .wrap .menuText .menuAbout:hover {
   color: #5c5bb8;
 }
 
-body .wrap .menu .menuText .menuWork::after {
+body .wrap .menuText .menuWork::after {
   display: block;
   position: relative;
   bottom: 50%;
@@ -161,16 +212,16 @@ body .wrap .menu .menuText .menuWork::after {
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuWork:hover::after {
+body .wrap .menuText .menuWork:hover::after {
   width: 150%;
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuWork:hover {
+body .wrap .menuText .menuWork:hover {
   color: #00ff33;
 }
 
-body .wrap .menu .menuText .menuContact::after {
+body .wrap .menuText .menuContact::after {
   display: block;
   position: relative;
   bottom: 50%;
@@ -184,16 +235,16 @@ body .wrap .menu .menuText .menuContact::after {
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuContact:hover::after {
+body .wrap .menuText .menuContact:hover::after {
   width: 150%;
   z-index: -1;
 }
 
-body .wrap .menu .menuText .menuContact:hover {
+body .wrap .menuText .menuContact:hover {
   color: #bbc980;
 }
 
-body .wrap .menu .menuText .bg {
+body .wrap .menuText .bg {
   width: 100%;
   height: 100%;
   background: #000;
@@ -202,6 +253,14 @@ body .wrap .menu .menuText .bg {
   left: 0;
   z-index: -5;
   opacity: 0.9;
+}
+
+body .wrap .menuTextOn {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1000;
 }
 
 body .wrap .scrollDown {
@@ -268,6 +327,21 @@ body .wrap .about .aboutAnimation h2 span {
   right: 0;
   font-size: 1.5vw;
   line-height: 0;
+}
+
+body .wrap .about .aboutAnimationOn .notAboutTitle {
+  -webkit-animation: noIntroAni 1s forwards;
+          animation: noIntroAni 1s forwards;
+}
+
+body .wrap .about .aboutAnimationOn .aboutTitle {
+  -webkit-animation: IntroAni 1s 1s forwards;
+          animation: IntroAni 1s 1s forwards;
+}
+
+body .wrap .about .aboutAnimationOn span {
+  -webkit-animation: IntroAniSpan 1s 1s forwards;
+          animation: IntroAniSpan 1s 1s forwards;
 }
 
 body .wrap .about .aboutImg {
@@ -389,6 +463,11 @@ body .wrap .about .exp li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateX(70%);
+          transform: translateX(70%);
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
 body .wrap .about .exp li .expImg {
@@ -454,6 +533,21 @@ body .wrap .work .workAnimation h2 span {
   right: 0;
   font-size: 1.5vw;
   line-height: 0;
+}
+
+body .wrap .work .workAnimationOn .notWorkTitle {
+  -webkit-animation: noIntroAni 1s forwards;
+          animation: noIntroAni 1s forwards;
+}
+
+body .wrap .work .workAnimationOn .workTitle {
+  -webkit-animation: IntroAni 1s 1s forwards;
+          animation: IntroAni 1s 1s forwards;
+}
+
+body .wrap .work .workAnimationOn span {
+  -webkit-animation: IntroAniSpan 1s 1s forwards;
+          animation: IntroAniSpan 1s 1s forwards;
 }
 
 body .wrap .work .projects {
@@ -571,6 +665,21 @@ body .wrap .contact .contactAnimation h2 span {
   right: 0;
   font-size: 1.5vw;
   line-height: 0;
+}
+
+body .wrap .contact .contactAnimationOn .notContactTitle {
+  -webkit-animation: noIntroAni 1s forwards;
+          animation: noIntroAni 1s forwards;
+}
+
+body .wrap .contact .contactAnimationOn .contactTitle {
+  -webkit-animation: IntroAni 1s 1s forwards;
+          animation: IntroAni 1s 1s forwards;
+}
+
+body .wrap .contact .contactAnimationOn span {
+  -webkit-animation: IntroAniSpan 1s 1s forwards;
+          animation: IntroAniSpan 1s 1s forwards;
 }
 
 body .wrap .contact .contact_text {

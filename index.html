@@ -12,33 +12,32 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Nanum+Gothic&family=Staatliches&display=swap" rel="stylesheet">
+<script defer src="js/script.js"></script>
     <title>Seungwon's Portfolio</title>
 </head>
 <body>
     <div class="wrap">
-        <div class="menu">
-            <div class="hamburger">
-                <span class="hamburger1"></span>
-                <span class="hamburger2"></span>
-                <span class="hamburger3"></span>
-            </div>
-            <div class="menuText">
-                <p class="menuHome menuTexts">Home</p>
-                <p class="menuAbout menuTexts">About</p>
-                <p class="menuWork menuTexts">Work</p>
-                <p class="menuContact menuTexts">Contact</p>
-                <div class="bg"></div>
-            </div>
+        <div class="hamburger">
+            <span class="hamburger1"></span>
+            <span class="hamburger2"></span>
+            <span class="hamburger3"></span>
+        </div>
+        <div class="menuText">
+            <p class="menuHome menuTexts">Home</p>
+            <p class="menuAbout menuTexts">About</p>
+            <p class="menuWork menuTexts">Work</p>
+            <p class="menuContact menuTexts">Contact</p>
+            <div class="bg"></div>
         </div>
         <div class="scrollDown">scroll Down<br>▽</div>
         <section class="home">
-            <h1 class="hometext">Seongwon's Portfolio :)</h1>
+            <h1 class="hometext"></h1>
         </section>
         <section class="about">
             <div class="aboutAnimation">
-                <h2>About<span>01</span></h2>
-                <h2>Work<span>02</span></h2>
-                <h2>Contact<span>03</span></h2>
+                <h2 class="aboutTitle">About<span>01</span></h2>
+                <h2 class="notAboutTitle">Work<span>02</span></h2>
+                <h2 class="notAboutTitle">Contact<span>03</span></h2>
             </div>
             <div class="aboutImg"></div>
             <div class="shortText">
@@ -68,7 +67,7 @@
                 <p>REACT</p>
             </div>
             <ul class="exp">
-                <li>
+                <li class="expList">
                     <div class="expImg">
                         <img src="img/expImg1.jpg" alt="expImg1">
                     </div>
@@ -79,7 +78,7 @@
                         </p>
                     </div>
                 </li>
-                <li>
+                <li class="expList">
                     <div class="expImg">
                         <img src="img/expImg2.png" alt="expImg2">
                     </div>
@@ -88,7 +87,7 @@
                         <p>새로운 것을 배우는 것을 두려워하지 않으며 새로운 환경 또한 쉽게 적응합니다.</p>
                     </div>
                 </li>
-                <li>
+                <li class="expList">
                     <div class="expImg">
                         <img src="img/expImg3.png" alt="expImg3">
                     </div>
@@ -101,9 +100,9 @@
         </section>
         <section class="work">
             <div class="workAnimation">
-                <h2>About<span>01</span></h2>
-                <h2>Work<span>02</span></h2>
-                <h2>Contact<span>03</span></h2>
+                <h2 class="notWorkTitle">About<span>01</span></h2>
+                <h2 class="workTitle">Work<span>02</span></h2>
+                <h2 class="notWorkTitle">Contact<span>03</span></h2>
             </div>
             <div class="projects">
                 <div class="work1 works">
@@ -194,9 +193,9 @@
         </section>
         <section class="contact">
             <div class="contactAnimation">
-                <h2>About<span>01</span></h2>
-                <h2>Work<span>02</span></h2>
-                <h2>Contact<span>03</span></h2>
+                <h2 class="notContactTitle">About<span>01</span></h2>
+                <h2 class="notContactTitle">Work<span>02</span></h2>
+                <h2 class="contactTitle">Contact<span>03</span></h2>
             </div>
             <div class="contact_text">
                 <p><b>"</b><br>
