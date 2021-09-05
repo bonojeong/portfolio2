@@ -335,13 +335,13 @@ body .wrap .about .aboutAnimationOn .notAboutTitle {
 }
 
 body .wrap .about .aboutAnimationOn .aboutTitle {
-  -webkit-animation: IntroAni 1s 1s forwards;
-          animation: IntroAni 1s 1s forwards;
+  -webkit-animation: IntroAni 1s forwards;
+          animation: IntroAni 1s forwards;
 }
 
 body .wrap .about .aboutAnimationOn span {
-  -webkit-animation: IntroAniSpan 1s 1s forwards;
-          animation: IntroAniSpan 1s 1s forwards;
+  -webkit-animation: IntroAniSpan 1s forwards;
+          animation: IntroAniSpan 1s forwards;
 }
 
 body .wrap .about .aboutImg {
@@ -551,30 +551,38 @@ body .wrap .work .workAnimationOn span {
 }
 
 body .wrap .work .projects {
-  width: auto;
-  height: 100vh;
+  width: 100vw;
+  height: 150vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #f1f1f1;
 }
 
 body .wrap .work .projects .works {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+  width: 40%;
+  height: 75vh;
   background: #1a1a1a;
+  position: relative;
 }
 
 body .wrap .work .projects .works > h1 {
   font-family: 'Staatliches', cursive;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 40vw;
+  top: 3%;
+  left: 3%;
+  font-size: 10vw;
   opacity: 0.2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 body .wrap .work .projects .works .works_Info {
@@ -587,12 +595,12 @@ body .wrap .work .projects .works .works_Info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 body .wrap .work .projects .works .works_Info .works_Img {
-  width: 40vw;
+  width: 40%;
   z-index: 10;
 }
 
@@ -601,13 +609,16 @@ body .wrap .work .projects .works .works_Info .works_Img img {
 }
 
 body .wrap .work .projects .works .works_Info .works_text {
-  width: 40vw;
+  width: 40%;
   z-index: 10;
 }
 
 body .wrap .work .projects .works .works_Info .works_text h1 {
-  font-size: 3vw;
-  line-height: 2;
+  font-size: 2.5vw;
+  line-height: 1;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 1vh;
+  margin-bottom: 2vh;
 }
 
 body .wrap .work .projects .works .works_Info .works_text p {
@@ -626,9 +637,17 @@ body .wrap .work .projects .works .works_Info .works_text .view {
   width: 100%;
 }
 
+body .wrap .work .projects .works .works_Info .works_text .view a {
+  display: block;
+}
+
 body .wrap .work .projects .works .works_Info .works_text .view:hover {
   background: #f1f1f1;
   color: #000;
+}
+
+body .wrap .work .projects .works:hover > h1 {
+  opacity: 1;
 }
 
 body .wrap .contact {

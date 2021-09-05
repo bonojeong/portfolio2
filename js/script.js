@@ -57,9 +57,9 @@ const abPosWork = winTop + work.getBoundingClientRect().top;
 const abPosContact = winTop + contact.getBoundingClientRect().top;
 
 //메뉴리스트들 눌렀을 때 해당하는 위치로 이동 + smooth 효과
-menuHome.addEventListener('click', () => window.scrollTo({top:abPosHome, behavior:'smooth'}) )
-menuAbout.addEventListener('click', () => window.scrollTo({top:abPosAbout,behavior:'smooth'}) )
-menuWork.addEventListener('click', () => window.scrollTo({top:abPosWork,behavior:'smooth'}) )
+menuHome.addEventListener('click', () => window.scrollTo({top:abPosHome, left:0, behavior:'smooth'}) )
+menuAbout.addEventListener('click', () => window.scrollTo({top:abPosAbout, left:0, behavior:'smooth'}) )
+menuWork.addEventListener('click', () => window.scrollTo({top:abPosWork, left:0, behavior:'smooth'}) )
 menuContact.addEventListener('click', () => window.scrollTo({top:abPosContact,behavior:'smooth'}) )
 
 //=====================================================
@@ -81,6 +81,7 @@ window.addEventListener('scroll',function(){
         aboutAnimation.classList.add('aboutAnimationOn')
     }
 
+    //exp부분 위치값에 따라 스타일 변경
     const expList = document.querySelectorAll('.expList')
     expList.forEach( i => {
         let expPos = i.getBoundingClientRect().top
@@ -100,6 +101,7 @@ window.addEventListener('scroll',function(){
 
     if(workPos >-200 && workPos < 200){
         workAnimation.classList.add('workAnimationOn')
+        
     }
 
 
@@ -113,12 +115,14 @@ window.addEventListener('scroll',function(){
 
     if(contactPos >-200 && contactPos <100){
         contactAnimation.classList.add('contactAnimationOn')
+ 
     }
 
 
     //======================================================
 
 })
+
 
 
 
