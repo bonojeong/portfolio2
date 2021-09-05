@@ -69,6 +69,7 @@ body {
   width: 100vw;
   height: auto;
   cursor: default;
+  overflow-x: hidden;
 }
 
 body .wrap {
