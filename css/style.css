@@ -349,7 +349,8 @@ body .wrap .about .aboutImg {
   width: 100vw;
   height: 100vh;
   background: url("../img/aboutImg.jpg") center center no-repeat;
-  background-size: cover;
+  background-size: contain;
+  margin-bottom: 30vh;
 }
 
 body .wrap .about .shortText {
